@@ -55,9 +55,9 @@
 libprofiler.so libprofiler.so.0 libprofiler.so.0.4.18libtcmalloc.so libtcmalloc.so.4 libtcmalloc.so.4.5.3
     > mount-read-write.sh
 2. 修改/usr/lib/systemd/system/MXNavi.service
-Environment=HEAPPROFILE=/var/MXNavi/heap_dump
-Environment=HEAP_PROFILE_ALLOCATION_INTERVAL=0
-Environment=HEAP_PROFILE_INUSE_INTERVAL=52428800
+    > Environment=HEAPPROFILE=/var/MXNavi/heap_dump  
+    > Environment=HEAP_PROFILE_ALLOCATION_INTERVAL=0  
+    > Environment=HEAP_PROFILE_INUSE_INTERVAL=52428800  
 3. chmod -R 0777 /var/MXNavi
 4. 重启
 内存每增长一个阈值，tcmalloc会生成一个文件；测试完毕后把    heap_dump*拷出来
